@@ -26,8 +26,7 @@
                                [preColumnsEnd]
                                8px
                                [ColumnsEnd];
-        grid-template-rows: [logoStart] auto [logoEnd
-                            topStart] auto [topEnd]
+        grid-template-rows: [logoStart topStart] auto [logoEnd topEnd]
                             4vw
                             /* [searchNowStart] 18.75vw [searchNowEnd] */
                             4vw
@@ -52,6 +51,15 @@
         grid-column-start: 2;
         grid-column-end: preColumnsEnd; */
     }
+    .left {
+        float: left;
+        font-size: 2.125em;
+    }
+    .right {
+        float: right;
+        font-size: 2.125em;
+        margin-left: 2px;
+    }
     .top {
         grid-row-start: topStart;
         grid-row-end: topEnd;
@@ -67,12 +75,12 @@
     .backgroundOfLogo {
         grid-row-end: topEnd;
     }
-    #navTelevisionIcon {
+    /* #navTelevisionIcon {
         margin-right: 1.5em;
     }
     #navSearchIcon {
         margin-right: 1.5em;
-    }
+    } */
 }
 @media (min-device-width: 600px) {
     /* Search button */
