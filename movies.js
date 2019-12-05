@@ -26,6 +26,7 @@
                     x = x + 1
                     var moviePop = results.results[i].vote_average
                     var movieID = results.results[i].id
+                    console.log(movieID)
                     var movieTitle = results.results[i].title
                     var movieYear = results.results[i].release_date
                     var movieGenreID = results.results[i].genre_ids

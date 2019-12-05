@@ -1,17 +1,3 @@
-/* .nav-wrapper {
-background-color: DarkGrey;
-color: Black;
-}
-.material-icons {
-color: Black;
-}
-.brand-logo {
-color: Black;
-} */
-/* .top {
-display: none !important;
-}
-} */
 body {
     position: relative;
     height: 95vh;
@@ -19,32 +5,43 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
 }
-footer {
+/* footer {
     position: absolute;
     bottom: 0;
     left: 0;
     text-decoration: none;
-}
+} */
 .logo {
-    left: 42%;
-    position: absolute;
+    /* left: 42%; */
+    /* position: absolute; */
+    grid-row-start: logoStart;
+    grid-row-end: logoEnd;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    place-self: center;
+    z-index: 1;
 }
-.whiteLogo {
+.backgroundOfLogo {
+    background-color: white;
+    grid-row-start: logoStart;
+    grid-row-end: logoEnd;
+    grid-column-start: 2;
+    grid-column-end: preColumnsEnd;
+}
+/* .whiteLogo {
     padding-left: 6.5vw;
     height: 20vw;
-}
+} */
 .top {
-    margin-left: 8px;
+    /* margin-left: 8px; */
     list-style-type: none;
-    margin-right: 0;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #ffffff;
     font-family: 'Roboto Condensed', sans-serif;
     /* position: sticky; */
-    top: 0;
+    /* top: 0; */
 }
 .preFooter {
     grid-row-start: preFooterStart;
@@ -58,14 +55,15 @@ footer {
     /* position: absolute; */
     /* bottom: -35vw; */
     margin: 0;
+    margin-bottom: 8px !important;
     padding: 0;
     overflow: hidden;
     background-color: #ffffff;
     font-family: 'Roboto Condensed', sans-serif;
-    width: 100vw;
+    width: calc(100vw - 16px);
     height: auto;
-    grid-column-start: 1;
-    grid-column-end: ColumnsEnd;
+    grid-column-start: 2;
+    grid-column-end: preColumnsEnd;
     grid-row-start: footerStart;
     grid-row-end: footerEnd;
     align-self: baseline;
@@ -186,14 +184,6 @@ footer {
     padding: 14px 16px;
     text-decoration: none;
     text-align: center;
-    text-emphasis: bold;
-}
-.left {
-    float: left;
-}
-.right {
-    float: right;
-    margin-left: 2px;
 }
 .verticalNav {
     margin: 0;
@@ -457,10 +447,10 @@ padding-left: 5vw;
 .searchNow {
     text-decoration: none;
     list-style-type: none;
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: searchNowStart;
+    grid-row-end: searchNowEnd;
 }
 .searchNowText {
     margin-block-start: 0 !important;
@@ -472,10 +462,10 @@ padding-left: 5vw;
     text-align: center;
     font-family: 'Exo', sans-serif;
     max-width: 75vw;
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 5;
-    grid-row-end: 5;
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start: missionPromptStart;
+    grid-row-end: missionPromptEnd;
     align-self: start;
 }
 .spotlightMoviePrompt {
@@ -484,10 +474,10 @@ padding-left: 5vw;
     text-align: center;
     font-family: 'Exo', sans-serif;
     max-width: 75vw;
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 4;
-    grid-row-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start: spotlightMoviePromptStart;
+    grid-row-end: spotlightMoviePromptEnd;
     align-self: start;
 }
 .donatePrompt {
@@ -496,10 +486,10 @@ padding-left: 5vw;
     text-align: center;
     font-family: 'Exo', sans-serif;
     max-width: 75vw;
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 6;
-    grid-row-end: 6;
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start: donatePromptStart;
+    grid-row-end: donatePromptEnd;
     align-self: start;
 }
 .learnMore {

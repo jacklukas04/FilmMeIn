@@ -1,4 +1,5 @@
 @media (max-device-width: 599px) {
+    /* Search button */
     .searchButton {
         width: 60vw;
         height: 18.75vw;
@@ -7,30 +8,74 @@
         margin-right: 20vw; */
         border-radius: 30px;
         /* padding-top: 0.005vw; */
+        display: none;
     }
     .searchNowText {
         padding-top: 7.125vw;
         margin-top: 0;
     }
+    /* Grid container*/
     .homeContainer {
         display: grid;
-        grid-template-columns: 12.5vw
+        grid-template-columns: 8px
+                               calc(12.5vw - 8px)
                                7.5vw
                                60vw
                                7.5vw
-                               12.5vw [ColumnsEnd];
-        grid-template-rows: 4vw
-                            18.75vw
+                               calc(12.5vw - 8px)
+                               [preColumnsEnd]
+                               8px
+                               [ColumnsEnd];
+        grid-template-rows: [logoStart] auto [logoEnd
+                            topStart] auto [topEnd]
                             4vw
-                            auto
-                            auto
-                            auto
-                            [preFooterStart] 1fr [preFooterEnd
+                            /* [searchNowStart] 18.75vw [searchNowEnd] */
+                            4vw
+                            [spotlightMoviePromptStart] auto [spotlightMoviePromptEnd
+                            missionPromptStart] auto [missionPromptEnd
+                            donatePromptStart] auto [donatePromptEnd
+                            preFooterStart] 1fr [preFooterEnd
                             footerStart] auto [footerEnd];
         align-content: space-between;
+        min-height: calc(100vh - 8px);
+    }
+    /* Navbar */
+    .left {
+        /* grid-row-start: leftStart;
+        grid-row-end: leftEnd;
+        grid-column-start: 2;
+        grid-column-end: preColumnsEnd; */
+    }
+    .right {
+        /* grid-row-start: logoStart;
+        grid-row-end: logoEnd;
+        grid-column-start: 2;
+        grid-column-end: preColumnsEnd; */
+    }
+    .top {
+        grid-row-start: topStart;
+        grid-row-end: topEnd;
+        grid-column-start: 2;
+        grid-column-end: preColumnsEnd;
+    }
+    .logo {
+        grid-row-start: logoStart;
+        grid-row-end: logoEnd;
+        grid-column-start: 2;
+        grid-column-end: preColumnsEnd;
+    }
+    .backgroundOfLogo {
+        grid-row-end: topEnd;
+    }
+    #navTelevisionIcon {
+        margin-right: 1.5em;
+    }
+    #navSearchIcon {
+        margin-right: 1.5em;
     }
 }
 @media (min-device-width: 600px) {
+    /* Search button */
     .searchButton {
         width: 20vw;
         height: 6.25vw;
@@ -42,22 +87,49 @@
     .searchNowText {
         padding-top: 2vw;
     }
+    /* Grid container */
     .homeContainer {
         display: grid;
-        grid-template-columns: 12.5vw
+        grid-template-columns: 8px
+                               calc(12.5vw - 8px)
                                27.5vw
                                20vw
                                27.5vw
-                               12.5vw
+                               calc(12.5vw - 8px)
+                               [preColumnsEnd]
+                               8px
                                [ColumnsEnd];
-        grid-template-rows: 4vw
-                            6.25vw
+        grid-template-rows: [logoStart topStart] auto [logoEnd topEnd]
                             4vw
-                            auto
-                            auto
-                            auto
-                            [preFooterStart] 1fr [preFooterEnd
+                            [searchNowStart] 6.25vw [searchNowEnd]
+                            4vw
+                            [spotlightMoviePromptStart] auto [spotlightMoviePromptEnd
+                            missionPromptStart] auto [missionPromptEnd
+                            donatePromptStart] auto [donatePromptEnd
+                            preFooterStart] 1fr [preFooterEnd
                             footerStart] auto [footerEnd];
         align-content: space-between;
+        min-height: calc(100vh - 8px);
     }
+
+/* Navbar */
+.left {
+    float: left;
+}
+.right {
+    float: right;
+    margin-left: 2px;
+}
+.top {
+    grid-row-start: topStart;
+    grid-row-end: topEnd;
+    grid-column-start: 2;
+    grid-column-end: preColumnsEnd;
+}
+.logo {
+    grid-row-start: logoStart;
+    grid-row-end: logoEnd;
+    grid-column-start: 2;
+    grid-column-end: preColumnsEnd;
+}
 }
